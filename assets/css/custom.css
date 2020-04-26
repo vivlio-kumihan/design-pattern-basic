@@ -1,4 +1,7 @@
-h1, h2, h3, h4, h5, h6, p {
+/* /////////////////////////////////////////////////////////*/
+/* basic typograph */
+
+h1, h2, h3, h4, h5, h6, p, li, a {
   font-family: 'Noto Sans JP', sans-serif;
 }
 /* font-family: 'Noto Serif JP', serif;
@@ -6,5 +9,190 @@ font-family: 'M PLUS 1p', sans-serif;
 font-family: 'M PLUS Rounded 1c', sans-serif;
 font-family: 'Pacifico', cursive; */
 
+ul {
+  list-style-type: none;
+}
 
 /* /////////////////////////////////////////////////////////*/
+#container, #menubar, footer .inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/*ヘッダーブロック*/
+header {
+	position: relative;
+	margin: 0 auto;
+	height: 170px;	/*ヘッダーの高さ*/
+  /*背景画像の読み込み。左から70%、上下中央に配置。幅700px。*/
+  background: url(/images/header_bg.jpg) no-repeat 80% center / 800px;
+}
+
+/*ロゴ画像*/
+header #logo img {
+  width: 350px;
+  position: absolute;
+	left: 3%;		/*ヘッダーブロックの左からの配置指定*/
+	bottom: 65px;	/*ヘッダーブロックの下からの配置指定*/
+}
+
+header address {
+  position: absolute;
+  right: 2%;
+  bottom: 20px;
+  text-align: center;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 80%;
+  font-weight: 500;
+  line-height: 1.4;
+  text-shadow: 1px 1px 3px #fff, -1px -1px 3px #fff;
+}
+
+header address .tel {
+    color: #ff9999;
+    font-size: 2rem;
+    background: url(../images/icon_tel.png) no-repeat left center / 40px;
+    padding-left: 45px;
+}
+
+/* /////////////////////////////////////////////////////////*/
+/* navi bar */
+#menubar {
+  position: relative;
+  margin: 0 auto 20px;
+  height: 75px;
+}
+
+#menubar li {
+    float: left;
+    width: 16.66%;
+    line-height: 1.2;
+}
+
+#menubar li span {
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+    opacity: 0.5; /* 透明度 */
+}
+
+#menubar li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    height: 90px;
+    padding-top: 15px;
+    color: #fff;
+    border-left: 1px dashed rgba(255,255,255,0.4);
+    background: #ff9999;
+}
+
+#menubar ul.dwmenu {
+    position: absolute;
+    visibility: hidden;
+    z-index: 10;
+    width: 16.66%;
+    border-top: 1px solid #fff;
+}
+
+
+
+/* /////////////////////////////////////////////////////////*/
+/* footer */
+footer {
+  clear: both;
+  overflow: hidden;
+  border-top: 5px solid #ff9999;
+  background: #444;
+  color: #fff;
+  padding-top: 20px;
+}
+
+footer .inner {
+  padding: 0 50px;
+}
+
+/* section {
+  display: block;
+} */
+
+.half {
+  width: 48%;
+}
+
+.fl {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 20px;
+}
+
+.fr {
+  float: right;
+  margin-right: 2%;
+  margin-bottom: 20px;
+}
+
+footer h2 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: white;
+}
+
+#footermenu {
+  clear: both;
+  overflow: hidden;
+  font-size: 80%;
+  margin-left: -1%;
+  padding: 20px 0;
+}
+
+#footermenu ul {
+  float: left;
+  width: 24%;
+  margin-left: 1%;
+}
+
+#footermenu li.title {
+  font-size: 0.85rem;
+  font-weight: 900;
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 0.3rem;
+}
+
+#footermenu ul li {
+    padding: 0 15px;
+}
+
+#footermenu li a, #copyright a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+footer li a {
+  color: #fff;
+}
+
+footer li a:hover {
+  background: linear-gradient(transparent 0%, #ff9999 0%);
+}
+
+
+#copyright {
+  clear: both;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+
+#copyright a {
+  font-size: 1rem;
+  font-weight: 900;
+  /* color: white; */
+}

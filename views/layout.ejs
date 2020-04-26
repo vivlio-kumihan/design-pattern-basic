@@ -4,7 +4,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMMON SITE</title>
+    <title>病院・歯科医院・整体・整骨院サイト向け 無料ホームページテンプレート</title>
+    <meta name="description" content="サイト説明">
+    <meta name="keywords" content="キーワード1,キーワード2...">
     <!-- CSS only -->
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/custom.css">
@@ -15,9 +17,15 @@
   </head>
 
   <body>
-    <%- include("partials/header") %>
-    <%- body %>
-    <%- include("partials/footer") %>
+    <div id="container">
+      <header>
+        <%- include("partials/header") %>
+      </header>
+      <%- body %>
+    </div>
+    <footer class="inner">
+      <%- include("partials/footer") %>
+    </footer>
     <!-- JS, Popper.js, and jQuery -->
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
