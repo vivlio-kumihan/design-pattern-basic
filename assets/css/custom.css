@@ -1,3 +1,4 @@
+
 /* /////////////////////////////////////////////////////////*/
 /* basic typograph */
 
@@ -116,7 +117,69 @@ header address .tel {
 
 /* /////////////////////////////////////////////////////////*/
 
+#mainimg {
+  clear: both;
+}
 
+#mainimg img {
+  width: 100%;
+}
+
+#mainimg .parent {
+  position: relative;
+}
+
+#mainimg .child {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+/* #mainimg {
+  /* 前の要素にかかっている回り込みの解除 */
+  /* clear: both;  */
+  /* 「absolute（絶対位置）」「relative（相対位置:元に居た位置からの相対）」 */
+  /* ex: { position: relative; top:150px; left:100px; } */
+  /* position: relative; */
+  /* width: 100%; */
+/* } */
+
+#mainimg img {
+  border-radius: 10px;
+} */
+
+/* .slide0 { */
+  /* position: relative; */
+  /* position: absolute; */
+  /* left: 0px; */
+  /* top: 0px; */
+  /* 親要素、または自身で設定しているウィンドウ幅一杯に可変で対応する。 */
+  /* なお、autoはpaddingを引いてウィンドウ幅一杯に可変で対応。 */
+  /* width: 100%; */
+  /* height: auto; */
+/* } */
+
+/* .slide1, .slide2, .slide3 {
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+} */
+
+/* img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle; 
+} */
+
+
+
+/* /////////////////////////////////////////////////////////*/
 
 #sub {
   float: left;
@@ -273,7 +336,6 @@ footer li a:hover {
   background: linear-gradient(transparent 0%, #ff9999 0%);
 }
 
-
 #copyright {
   clear: both;
   text-align: center;
@@ -286,4 +348,40 @@ footer li a:hover {
   font-size: 1rem;
   font-weight: 900;
   /* color: white; */
+}
+
+/* /////////////////////////////////////////////////////////*/
+/* test relative and absolute */
+.area {
+  margin: 0em auto;
+  width: 200px;
+  height: 200px;
+  background-color: brown;
+  /* border: solid 1px white; */
+}
+
+.area p {
+  line-height: 180px;
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+#a {
+  position: relative;
+}
+
+#b {
+  background-color: teal;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#c {
+  background-color: rebeccapurple;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }

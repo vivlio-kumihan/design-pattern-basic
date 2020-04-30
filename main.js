@@ -72,6 +72,12 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
+router.get("/position", (req, res) => {
+  // res.send("Here is position.");
+  res.render("info/position");
+
+});
+
 // //  contollerに配列で値を仕込んでおいてviewに渡す際の書き方。
 // router.get("/FILE_NAME",
 //   CONTOLLER_NAME.METHOD, (req, res, next) => {
