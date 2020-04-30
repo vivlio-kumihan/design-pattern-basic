@@ -25,7 +25,7 @@ table {
 }
 
 /* /////////////////////////////////////////////////////////*/
-#container, #menubar, footer .inner {
+#container, footer {
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -117,67 +117,82 @@ header address .tel {
 
 /* /////////////////////////////////////////////////////////*/
 
-#mainimg {
+#contents {
+  margin: 30px auto;
+}
+
+/* /////////////////////////////////////////////////////////*/
+/*１枚目*/
+@keyframes slide1 {
+	0% {opacity: 0;}
+	10% {opacity: 1;}
+	30% {opacity: 1;}
+	40% {opacity: 0;}
+	100% {opacity: 0;}
+}
+/*２枚目*/
+@keyframes slide2 {
+	0% {opacity: 0;}
+	20% {opacity: 0;}
+	30% {opacity: 1;}
+	60% {opacity: 1;}
+	70% {opacity: 0;}
+	100% {opacity: 0;}
+}
+/*３枚目*/
+@keyframes slide3 {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	60% {opacity: 1;}
+	85% {opacity: 1;}
+	95% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+aside #mainimg {
+  margin-top: 100px;
+}
+.area {
   clear: both;
-}
+  }
 
-#mainimg img {
+.area img {
   width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-#mainimg .parent {
+#slide-top {
   position: relative;
 }
 
-#mainimg .child {
+#slide-1st {
   position: absolute;
-  left: 0px;
   top: 0px;
+  left: 0px;
+  animation-name: slide1;
 }
 
-/* #mainimg {
-  /* 前の要素にかかっている回り込みの解除 */
-  /* clear: both;  */
-  /* 「absolute（絶対位置）」「relative（相対位置:元に居た位置からの相対）」 */
-  /* ex: { position: relative; top:150px; left:100px; } */
-  /* position: relative; */
-  /* width: 100%; */
-/* } */
+#slide-2nd {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation-name: slide2;
+}
 
-#mainimg img {
-  border-radius: 10px;
-} */
+#slide-3rd {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation-name: slide3;
+}
 
-/* .slide0 { */
-  /* position: relative; */
-  /* position: absolute; */
-  /* left: 0px; */
-  /* top: 0px; */
-  /* 親要素、または自身で設定しているウィンドウ幅一杯に可変で対応する。 */
-  /* なお、autoはpaddingを引いてウィンドウ幅一杯に可変で対応。 */
-  /* width: 100%; */
-  /* height: auto; */
-/* } */
-
-/* .slide1, .slide2, .slide3 {
+#slide-1st, #slide-2nd, #slide-3rd {
   animation-duration: 12s;
   animation-iteration-count: infinite;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: auto;
   animation-fill-mode: both;
   animation-delay: 2s;
-} */
-
-/* img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle; 
-} */
-
-
+}
 
 /* /////////////////////////////////////////////////////////*/
 
@@ -227,7 +242,6 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-
 /* /////////////////////////////////////////////////////////*/
 /* table */
 /* ta2設定 */
@@ -266,10 +280,6 @@ footer {
 footer .inner {
   padding: 0 50px;
 }
-
-/* section {
-  display: block;
-} */
 
 .half {
   width: 48%;
@@ -352,15 +362,15 @@ footer li a:hover {
 
 /* /////////////////////////////////////////////////////////*/
 /* test relative and absolute */
-.area {
+/* .area {
   margin: 0em auto;
   width: 200px;
   height: 200px;
   background-color: brown;
-  /* border: solid 1px white; */
-}
+} */
+/* border: solid 1px white; */
 
-.area p {
+/* .area p {
   line-height: 180px;
   color: white;
   text-align: center;
@@ -384,4 +394,4 @@ footer li a:hover {
   position: absolute;
   top: 0px;
   left: 0px;
-}
+} */
