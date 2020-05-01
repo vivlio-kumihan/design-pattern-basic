@@ -8,9 +8,7 @@ const express = require("express"),
 // portの確保（オプション--環境変数で指定がなければ3000番を使う。）
 app.set("port", process.env.PORT || 3000);
 
-// 本文の解析で、
-// URLエンコーディングとJSONパラメータの処理を行う。
-// ///////////////////////////////////////////////全然理解してない箇所
+// for query, params, json
 router.use(express.urlencoded({ extended: false }));
 router.use(express.json());
 
@@ -36,7 +34,7 @@ mongoose.connect(
     console.log("MongoDBへの接続は成功しました。")
   });
 
-// Promise
+// for Promise
 // mongooseのPromiseではなく、グローバルのpromiseを使う。
 mongoose.Promise = global.Promise;
 
@@ -53,9 +51,6 @@ app.set("view engine", "ejs");
 //   レイアウトのための設計図であるlayouts.ejsが必須。
 router.use(layouts);
 
-// controllerのメソッドをロードする。    
-// const coursesCtl = require("./controllers/coursesCtl");
-
 // PUTメソッドをエミュレートするためのモジュールをロードする。
 const methodOverride = require("method-override");
 router.use(methodOverride("_method", {
@@ -64,19 +59,35 @@ router.use(methodOverride("_method", {
 
 // 経路
 //   リクエストが来た時の反応をここでスイッチングしていく。
-//   for index.ejs
-
 router.get("/", (req, res) => {
   // 初期状態の様子をみるため、ブラウザに文字列を送信してテストしてみる。
   // res.send("Here is ROOT.");
   res.render("index");
 });
 
-router.get("/position", (req, res) => {
-  // res.send("Here is position.");
-  res.render("info/position");
-
+router.get("/home", (req, res) => {
+    res.render("home");
 });
+router.get("/about", (req, res) => {
+    res.render("about");
+});
+router.get("/department", (req, res) => {
+    res.render("department");
+});
+router.get("/staff", (req, res) => {
+    res.render("staff");
+});
+router.get("/fqa", (req, res) => {
+    res.render("fqa");
+});
+router.get("/access-reserve", (req, res) => {
+    res.render("axs-resv/index");
+});
+
+// css positionのテスト用
+// router.get("/position", (req, res) => {
+//     res.render("info/position");
+// });
 
 // //  contollerに配列で値を仕込んでおいてviewに渡す際の書き方。
 // router.get("/FILE_NAME",
@@ -85,7 +96,7 @@ router.get("/position", (req, res) => {
 //   }
 // );
 
-// for user module
+// for CRUD, user module
 // router.get("/users", usersCtl.index);
 // router.get("/users", usersCtl.index, usersCtl.indexView);
 // router.get("/users/new", usersCtl.new);
