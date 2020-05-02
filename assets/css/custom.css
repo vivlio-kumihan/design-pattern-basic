@@ -15,8 +15,8 @@ a {
 }
 
 /* /////////////////////////////////////////////////////////*/
-#container, footer {
-  margin: 0 auto;
+#container {
+  margin: 0px auto;
   max-width: 1400px;
 }
 
@@ -163,7 +163,7 @@ nav #floating li span {
 
 /* /////////////////////////////////////////////////////////*/
 /* 各ページのnavigation bar */
-nav #classfy {
+nav #classify {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 0.9rem;
@@ -172,7 +172,7 @@ nav #classfy {
   border-radius: 10px;
 }
 
-nav #classfy p, nav #classfy a {
+nav #classify p, nav #classify a {
   color: rgba(83, 56, 62, 0.5);
 }
 
@@ -268,53 +268,47 @@ aside .notice {
 }
 
 /* /////////////////////////////////////////////////////////*/
-footer {
-  clear: both;
-  margin-top: 20px;
-  width: auto;
-  height: 60px;
-  border: 1px solid rgba(85, 107, 165, 0.5);
-}
+/* 『clear: both;』すると
+   『margin-top: 20px;』が取れない謎を『とりあえず』解決する */
+#clear-space { clear: both; }
 
 /* /////////////////////////////////////////////////////////*/
-/* footer */
-/* footer {
-  clear: both;
-  margin-top: 60px;
-  overflow: hidden;
-  color: #fff;
+footer {
+  margin-top: 20px;
   background: #444;
   border-top: 5px solid #ff9999;
-  padding-top: 20px;
-} */
-
-/* footer .inner {
-  padding: 0 50px;
 }
 
-.half {
+footer #footer-info {
+  margin: 0 auto;
+  width: 1400px;
+  padding-top: 30px;
+}
+
+footer #footer-info .half {
   width: 48%;
 }
 
-.fl {
+footer #footer-info .fl {
   float: left;
   margin-right: 2%;
   margin-bottom: 20px;
 }
 
-.fr {
+footer #footer-info .fr {
   float: right;
   margin-right: 2%;
   margin-bottom: 20px;
 }
 
-footer h2 {
-  font-size: 1.1rem;
+footer #footer-info h2 {
+  font-size: 0.95rem;
   font-weight: 900;
   color: white;
 }
 
-#footermenu {
+
+footer #footermenu {
   clear: both;
   overflow: hidden;
   font-size: 80%;
@@ -322,13 +316,13 @@ footer h2 {
   padding: 20px 0;
 }
 
-#footermenu ul {
+footer #footermenu ul {
   float: left;
   width: 24%;
   margin-left: 1%;
 }
 
-#footermenu li.title {
+footer #footermenu li.title {
   font-size: 0.85rem;
   font-weight: 900;
   background: rgba(0,0,0,0.3);
@@ -337,11 +331,11 @@ footer h2 {
   margin-bottom: 0.3rem;
 }
 
-#footermenu ul li {
+footer #footermenu ul li {
     padding: 0 15px;
 }
 
-#footermenu li a, #copyright a {
+footer #footermenu li a, #copyright a {
   font-size: 0.85rem;
   font-weight: 500;
   color: #fff;
@@ -357,15 +351,18 @@ footer li a:hover {
   background: linear-gradient(transparent 0%, #ff9999 0%);
 }
 
-#copyright {
-  clear: both;
+footer #footer-copyright {
+  padding: 20px 0px;
   text-align: center;
-  font-size: 0.95rem;
-  font-weight: 900;
-  margin-bottom: 60px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 1);
 }
 
-#copyright a {
-  font-size: 1rem;
-  font-weight: 900;
-} */
+footer #footer-copyright p,
+footer #footer-copyright a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
