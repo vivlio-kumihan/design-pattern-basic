@@ -3,11 +3,15 @@
 /* basic typograph */
 h1, h2, h3, h4, h5, h6, div, p, li, a {
   font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 900;
 }
 
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(83, 56, 62, 1);
 }
 
 /* /////////////////////////////////////////////////////////*/
@@ -16,7 +20,7 @@ ul {
   max-width: 1400px;
 }
 
-/* header */
+/* /////////////////////////////////////////////////////////*/
 header {
   position: relative;
 	height: 170px;	/*ヘッダーの高さ*/
@@ -50,6 +54,7 @@ header address .tel {
   background: url(../images/icon_tel.png) no-repeat left center / 40px;
 }
 
+/* /////////////////////////////////////////////////////////*/
 /* nav id="floating" */
 /* 大枠 */
 nav #floating li {
@@ -61,8 +66,8 @@ nav #floating li {
 nav #floating li a {
   text-decoration: none;
   display: block;
-  height: 50px;
   padding-top: 10px;
+  height: 50px;
   font-weight: 700;
   text-align: center;
   color: #fff;
@@ -85,140 +90,282 @@ nav #floating li span {
   opacity: 0.5;
 }
 
-/* indexページのトップ画像 */
+/* /////////////////////////////////////////////////////////*/
+/* indexページのトップ画像の効果 */
 /*１枚目*/
-/* @keyframes slide1 {
+@keyframes slide1 {
 	0% {opacity: 0;}
 	10% {opacity: 1;}
 	30% {opacity: 1;}
 	40% {opacity: 0;}
 	100% {opacity: 0;}
-} */
+}
 /*２枚目*/
-/* @keyframes slide2 {
+@keyframes slide2 {
 	0% {opacity: 0;}
 	20% {opacity: 0;}
 	30% {opacity: 1;}
 	60% {opacity: 1;}
 	70% {opacity: 0;}
 	100% {opacity: 0;}
-} */
+}
 /*３枚目*/
-/* @keyframes slide3 {
+@keyframes slide3 {
 	0% {opacity: 0;}
 	50% {opacity: 0;}
 	60% {opacity: 1;}
 	85% {opacity: 1;}
 	95% {opacity: 0;}
 	100% {opacity: 0;}
-} */
+}
 
-/* 大枠 */
+/* indexページのトップ画像の大枠 */
 #contents {
   clear: both;
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
-#top-image src {
-    width: 1400px;
+/* indexページのトップ画像 */
+#top-image img {
+    width: 100%;
     height: auto;
-
-}
-
-/* 
-#contents nav #top-image {
-  width: auto;
-  height: 60px;
-  border: 100px solid rgba(85, 107, 165, 0.5);
-} */
-
-
-
-/* nav #top-image {
-  clear: both;
-  width: 1400px;
-  height: auto;
-  background-color: khaki;
-  border: 1px solid blue;
-  border-radius: 100px;
-  width: auto;
-} */
-
-
-/* 
-aside #mainimg {
-  margin-top: 100px;
-}
-.area {
-  clear: both;
+    border-radius: 10px;
   }
 
-.area img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-#slide-top {
+.slide-top {
   position: relative;
 }
 
-#slide-1st {
+.slide-1st, .slide-2nd, .slide-3rd {
   position: absolute;
   top: 0px;
   left: 0px;
+}
+
+.slide-1st {
   animation-name: slide1;
 }
 
-#slide-2nd {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.slide-2nd {
   animation-name: slide2;
 }
 
-#slide-3rd {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.slide-3rd {
   animation-name: slide3;
 }
 
-#slide-1st, #slide-2nd, #slide-3rd {
+.slide-1st, .slide-2nd, .slide-3rd {
   animation-duration: 12s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
   animation-delay: 2s;
-} */
-
-
-
-
-
-
-
-
-/* 各ページのnavigation bar */
-#classify {
-  clear: both;
 }
 
+/* /////////////////////////////////////////////////////////*/
+/* 各ページのnavigation bar */
+nav #classfy {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #eee;
+  border-radius: 10px;
+}
+
+nav #classfy p, nav #classfy a {
+  color: rgba(83, 56, 62, 0.5);
+}
+
+/* /////////////////////////////////////////////////////////*/
 main {
   float: left;
   width: auto;
+  margin-top: 20px;
+  height: 900px;
   border: 1px solid rgba(85, 107, 165, 0.5);
 }
 
+/* /////////////////////////////////////////////////////////*/
 aside {
   float: left;
-  width: 350px;
-  height: 400px;
-  border: 1px solid rgba(85, 107, 165, 0.5);
+  width: 22%;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  line-height: 1.15rem;
+  font-weight: 500;
+  color: rgba(83, 56, 62, 1);
 }
 
+aside h2 {
+  font-weight: 900;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+aside h2::first-letter {
+    border-left: 3px solid #ff9999;
+    padding-left: 10px;
+}
+
+aside .aside-menu {
+  padding: 15px;
+  background: #f5f5f5;
+  border: solid 1px #dbdbdb;
+  box-shadow: 0px 0px 1px 1px #fff inset;
+  border-radius: 10px;
+}
+
+
+aside .aside-link {
+  margin-top: 20px;
+  border-top: solid 1.5px #e4e4e4;
+}
+
+aside .aside-link li {
+    border-bottom: solid 1.5px #e4e4e4;
+}
+
+aside .aside-link li a {
+    display: block;
+    padding: 10px 10px 10px 30px;
+    background: #fff url(../images/arrow2.png) no-repeat 10px center / 10px;
+}
+
+aside .aside-info {
+  margin-top: 20px;
+}
+/* table ta2設定 */
+aside table {
+  margin-top: 5px;
+	table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+}
+
+aside table th, aside table td {
+  height: 2rem;
+  vertical-align: middle;
+  word-break: break-all;
+	border: 1px solid #b7b7b7;
+}
+
+/* params lineを後ろに書かないと罫線が消える。 */
+aside table th {
+  background: #fffbe3;
+}
+
+aside .notice {
+  margin: 10px auto 10px;
+  padding: 10px;
+  font-size: 1.05rem;
+  line-height: 1.3rem;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(219, 11, 11, 1);
+  border-radius: 5px;
+}
+
+/* /////////////////////////////////////////////////////////*/
 footer {
   clear: both;
+  margin-top: 20px;
   width: auto;
   height: 60px;
   border: 1px solid rgba(85, 107, 165, 0.5);
 }
+
+/* /////////////////////////////////////////////////////////*/
+/* footer */
+/* footer {
+  clear: both;
+  margin-top: 60px;
+  overflow: hidden;
+  color: #fff;
+  background: #444;
+  border-top: 5px solid #ff9999;
+  padding-top: 20px;
+} */
+
+/* footer .inner {
+  padding: 0 50px;
+}
+
+.half {
+  width: 48%;
+}
+
+.fl {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 20px;
+}
+
+.fr {
+  float: right;
+  margin-right: 2%;
+  margin-bottom: 20px;
+}
+
+footer h2 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: white;
+}
+
+#footermenu {
+  clear: both;
+  overflow: hidden;
+  font-size: 80%;
+  margin-left: -1%;
+  padding: 20px 0;
+}
+
+#footermenu ul {
+  float: left;
+  width: 24%;
+  margin-left: 1%;
+}
+
+#footermenu li.title {
+  font-size: 0.85rem;
+  font-weight: 900;
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 0.3rem;
+}
+
+#footermenu ul li {
+    padding: 0 15px;
+}
+
+#footermenu li a, #copyright a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+footer li a {
+  color: #fff;
+}
+
+footer li a:hover {
+  background: linear-gradient(transparent 0%, #ff9999 0%);
+}
+
+#copyright {
+  clear: both;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+
+#copyright a {
+  font-size: 1rem;
+  font-weight: 900;
+} */

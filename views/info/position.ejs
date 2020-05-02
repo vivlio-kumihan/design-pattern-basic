@@ -1,12 +1,83 @@
+<!-- オブジェクトを重ねて配置する際に、
+仮想で領域かそれぞれが領域を持っているかで
+id, classセレクタの付け方の違いがある。 -->
 
+<!-- #1 仮想 -->　
   <div id="a" class="area">
-    <p class="a">A</p>
-    
+    <p>A</p>
+  
     <div id="b" class="area">
-      <p class="b">B</p>
+      <p>B</p>
     </div>
-    
+  
     <div id="c" class="area">
-      <p class="c">C</p>
+      <p>C</p>
     </div>
   </div>
+  
+<pre>
+  <code>
+    /* CSS */
+    .area {
+      margin: 0em auto;
+      width: 200px;
+      height: 200px;
+      background-color: brown;
+    }
+      
+    .area p {
+      line-height: 180px;
+      color: white;
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 900;
+    }
+      
+    #a {
+      position: relative;
+    }
+      
+    #b {
+      background-color: teal;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+      
+    #c {
+      background-color: rebeccapurple;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  </code>
+</pre>
+  
+<!-- #2 領域を持っている -->
+<nav id="top-image" class="slide-top">
+  <img src="images/1.jpg" />
+  <div class="slide-1st"><img src="images/1.jpg" /></div>
+  <div class="slide-2nd"><img src="images/2.jpg" /></div>
+  <div class="slide-3rd"><img src="images/3.jpg" /></div>
+</nav>
+
+<pre>
+  <code>
+    /* CSS */
+    #top-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    }
+    
+    .slide-top {
+    position: relative;
+    }
+    
+    .slide-1st, .slide-2nd, .slide-3rd {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    }
+  </code>
+</pre>  
