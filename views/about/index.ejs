@@ -12,7 +12,7 @@
 
 <main>
   
-  <h2>当院について</h2>
+  <h2 style="margin-top: 0px;">当院について</h2>
 
   <ul class="row-list">
       <li class="current">
@@ -26,28 +26,51 @@
     </li>
   </ul>
 
-  <div class="clear-space"></div>
+  <div class="cl-both"></div>
 
   <h3>当院について</h3>
 
   <p>プルダウンメニューが使えない環境（タブレットやスマートフォン）の為に、各プルダウンへのリンク先メニュー（↑）のある当ページを必ず作って下さい。</p>
-  <p><img src="images/sample1.jpg" alt=""><strong class="color1">何も指定しない場合は画像幅100%表示です。</strong><br>
-  ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。<br>
-  ここに説明を入れます。サンプルテキスト。ここに説明を入れます。<br>
-  ここに説明を入れます。サンプルテキスト。ここに説明を入れます。<br>
-  ここに説明を入れます。サンプルテキスト。ここに説明を入れます。</p>
-  <p><img src="images/sample1.jpg" alt="" class="fr w40p"><strong class="color1">右に回り込み（class=&quot;frw40p&quot;）</strong><br>
-  imgタグにclass=&quot;fr w40p&quot;を指定するとこのように右に回り込みします。画像の幅はcssフォルダのstyle.cssの.w40pのwidthの数字で変更できます。</p>
-  <p class="clear"><img src="images/sample1.jpg" alt="" class="fl w40p"><strong class="color1">左に回り込み（class=&quot;flw40p&quot;）</strong><br>
-  imgタグにclass=&quot;fl w40p&quot;を指定するとこのように右に回り込みします。画像の幅はcssフォルダのstyle.cssの.w40pのwidthの数字で変更できます。</p>
+
+  <div class="pre-blank">
+    <img src="images/sample1.jpg" alt="" />
+  </div>
+
+  <figcaption>何も指定しない場合は画像幅100%表示です。</figcaption>
+
+  <p>
+    ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。<br>
+    ここに説明を入れます。サンプルテキスト。ここに説明を入れます。<br>
+    ここに説明を入れます。サンプルテキスト。ここに説明を入れます。<br>
+    ここに説明を入れます。サンプルテキスト。ここに説明を入れます。
+  </p>
+  
+  <img src="images/sample1.jpg" style="width: 35%;" alt="" class="pre-blank fl-right mg-left-20">
+
+  <figcaption class="pre-blank">右に回り込み（class=&quot;frw40p&quot;）</figcaption>
+  
+  <p>
+    imgタグにclass=&quot;fr w40p&quot;を指定するとこのように右に回り込みします。画像の幅はcssフォルダのstyle.cssの.w40pのwidthの数字で変更できます。
+  </p>
+
+  <div class="cl-both">
+    <img src="images/sample1.jpg" style="width: 35%;" alt="" class="pre-blank fl-left mg-right-20">
+  </div>
+
+  <figcaption class="pre-blank">左に回り込み（class=&quot;flw40p&quot;）</figcaption>
+  
+  <p>
+    imgタグにclass=&quot;fl w40p&quot;を指定するとこのように右に回り込みします。画像の幅はcssフォルダのstyle.cssの.w40pのwidthの数字で変更できます。
+  </p>
   <p>
     このブロックの最初の段落タグにclass=&quot;clear&quot;の指定が入っていますが、float（回り込み）を解除する指定です。これがないと前のfloatに巻き込まれますので、レイアウト的に解除したい場合にclearを指定して下さい。
   </p>
   
-  <span id="about" class="link"></span>
-  
+  <div class="cl-both"></div>
   <h2>当テンプレートについて</h2>
+
   <h3>当テンプレートはレスポンシブWEBデザインです</h3>
+  
   <p>パソコン、スマホ、タブレットなど、各端末サイズでレイアウトが自動で切り替わります。<br>
   古いブラウザで閲覧した場合にCSSの一部が適用されない（角を丸くする加工やグラデーションなどの加工等）のでご注意下さい。</p>
   
@@ -86,105 +109,149 @@
   </p>
   
   <h3>注意：ヘッダーの文字サイズ調整機能を使う場合の設定</h3>
-  <p class="check">※テンプレートのダウンロードファイルだけでは文字サイズの変更ができません。</p>
+
+  <p class="notice">※テンプレートのダウンロードファイルだけでは文字サイズの変更ができません。</p>
+  
   <p>海外で公開されている「styleswitcher.js」というファイルをテンプレートのjsフォルダにもってくる必要があります。<br>
   <a href="http://template-party.com/file/styleswitcher.html" target="_blank">「styleswitcher.js」を配布元サイトよりDLする方法。</a>
   </p>
-  <p><strong class="color1">文字サイズ「大」を押した際の設定ファイルは</strong><br>
-  cssフォルダのchange.cssになります。必要に応じて調整して下さい。</p>
-  <p><strong class="color1">文字サイズボタンはIE9以降しか出ません</strong><br>
-  IE8以下では「文字サイズ」のタイトルのみが出て、大小のボタンは出ません。</p>
-  <p><strong class="color1">文字サイズ変更を使わない場合。</strong><br>
-  html上部の、<br>
-  &lt;link rel=&quot;alternate stylesheet&quot; href=&quot;css/change.css&quot; title=&quot;change&quot;&gt;<br>
-  &lt;script src=&quot;js/styleswitcher.js&quot;&gt;&lt;/script&gt;<br>
-  の２行を削除。後はヘッダーブロックの文字サイズ変更ブロックを削除</p>
+  <p class="theme-color font-w-bold">文字サイズ「大」を押した際の設定ファイルは</p>
+  <p>
+    cssフォルダのchange.cssになります。必要に応じて調整して下さい。
+  </p>
+  <p class="theme-color font-w-bold">文字サイズボタンはIE9以降しか出ません</p>
+  <p>
+    IE8以下では「文字サイズ」のタイトルのみが出て、大小のボタンは出ません。
+  </p>
+  <p class="theme-color font-w-bold">文字サイズ変更を使わない場合</p>
+  <p>
+    html上部の、<br>
+    &lt;link rel=&quot;alternate stylesheet&quot; href=&quot;css/change.css&quot; title=&quot;change&quot;&gt;<br>
+    &lt;script src=&quot;js/styleswitcher.js&quot;&gt;&lt;/script&gt;<br>
+    の２行を削除。後はヘッダーブロックの文字サイズ変更ブロックを削除
+  </p>
   
   <h3>titleタグ、copyright、metaタグ、他の設定</h3>
-  <p><strong class="color1">titleタグの設定はとても重要です。念入りにワードを選んで適切に入力しましょう。 </strong><br>
-  まず、htmlソースが見れる状態にして、<br>
-  <span class="look">&lt;title&gt;病院・歯科医院・整体・整骨院サイト向け 無料ホームページテンプレート tp_clinic4&lt;/title&gt;</span><br>
-  を編集しましょう。<br>
-  あなたのホームページ名が「東京横浜サンプル医院」だとすれば、<br>
-  <span class="look">&lt;title&gt;東京横浜サンプル医院&lt;/title&gt;</span><br>
-    とすればＯＫです。SEO対策もするなら冒頭に重要なワードを入れておきましょう。</p>
-  <p><strong class="color1">copyrightを変更しましょう。</strong><br>
-  続いてhtmlの下の方にある、<br>
-  <span class="look">Copyright&copy; 東京横浜サンプル医院 All Rights Reserved.</span><br>
+  <p class="theme-color font-w-bold">titleタグの設定はとても重要です。念入りにワードを選んで適切に入力しましょう。</p>
+  <p>
+
+  </p>
+  <p>
+    まず、htmlソースが見れる状態にして、
+  </p>
+  <div class="notice-gry">&lt;title&gt;病院・歯科医院・整体・整骨院サイト向け 無料ホームページテンプレート tp_clinic4&lt;/title&gt;</div>
+  <p>
+    を編集しましょう。<br>
+    あなたのホームページ名が「東京横浜サンプル医院」だとすれば、<br>
+  </p>
+  <div class="notice-gry">&lt;title&gt;東京横浜サンプル医院&lt;/title&gt;</div>
+  <p>とすればＯＫです。SEO対策もするなら冒頭に重要なワードを入れておきましょう。</p>
+  <p class="theme-color font-w-bold">copyrightを変更しましょう。</p>
+  <p>
+    続いてhtmlの下の方にある、
+  </p>
+  <div class="notice-gry">Copyright&copy; 東京横浜サンプル医院 All Rights Reserved.</div><br>
     の部分もあなたのサイト名に変更します。</p>
-  <p><strong class="color1">metaタグを変更しましょう。</strong><br>
-    htmlソースが見える状態にしてmetaタグを変更しましょう。</p>
-  <p>ソースの上の方に、<br>
-  <span class="look">content=&quot;ここにサイト説明を入れます&quot;</span><br>
-    という部分がありますので、テキストをサイトの説明文に入れ替えます。検索結果の文面に使われる場合もありますので、見た人が来訪したくなるような説明文を簡潔に書きましょう。</p>
-  <p>続いて、その下の行の<br>
-  <span class="look">content=&quot;キーワード１,キーワード２,～～～&quot;</span><br>
-    も設定します。ここはサイトに関係のあるキーワードを入れる箇所です。10個前後ぐらいあれば充分です。キーワード間はカンマ「,」で区切ります。</p>
-  <p><strong class="color1">h1ロゴのaltタグも変更しましょう。</strong><br>
-  html側に、<br>
-  <span class="look">alt=&quot;東京横浜サンプル医院&quot;</span><br>
-  となっている箇所があるので、この部分もあなたのサイト名に変更しましょう。</p>
+  <p class="theme-color font-w-bold">metaタグを変更しましょう。</p>
+  <p>
+    htmlソースが見える状態にしてmetaタグを変更しましょう。
+  </p>
+  <p>ソースの上の方に、</p>
+  <div class="notice-gry">content=&quot;ここにサイト説明を入れます&quot;</div>
+  <p>
+    という部分がありますので、テキストをサイトの説明文に入れ替えます。検索結果の文面に使われる場合もありますので、見た人が来訪したくなるような説明文を簡潔に書きましょう。
+  </p>
+  <p>続いて、その下の行の</p>
+  <div class="notice-gry">content=&quot;キーワード１,キーワード２,～～～&quot;</div>
+  <p>
+    も設定します。ここはサイトに関係のあるキーワードを入れる箇所です。10個前後ぐらいあれば充分です。キーワード間はカンマ「,」で区切ります。
+  </p>
+  <p class="theme-color font-w-bold">h1ロゴのaltタグも変更しましょう。</p>
+  <p>
+    phtml側に、
+  </p>
+  <div class="notice-gry">alt=&quot;東京横浜サンプル医院&quot;</div>
+  <p>
+    となっている箇所があるので、この部分もあなたのサイト名に変更しましょう。
+  </p>
   
   <h3>上部のロゴ画像について</h3>
   <p>文字なしの土台画像がbaseフォルダに入っていますのでそれにサイト名をのせてimagesフォルダに上書きして下さい。画像の大きさは自由に変更してもらっても構いませんがある程度大きくしておいた方が高解像度の端末で鮮明に見えます。
   </p>
-  <p><strong class="color1">ロゴサイズ変更は</strong><br>
+  <p class="theme-color font-w-bold">ロゴサイズ変更は</p>
+  <p>
     cssフォルダのstyle.cssの「header #logo」のwidthの数字で変更できます。各端末サイズごとに設定がある場合があるので注意して下さい。</p>
-  <p><strong class="color1">ロゴマークは</strong><br>
-    十字架をイメージした単純なデザインです。再利用していただいても構いませんが、商標登録など権利の指定はしないで下さい。ロゴをそのまま利用される際は念のため、他社に類似ロゴがないか確認して下さい。</p>
-  
+  < class="theme-color font-w-bold">ロゴマークは
+  <p>
+    十字架をイメージした単純なデザインです。再利用していただいても構いませんが、商標登録など権利の指定はしないで下さい。ロゴをそのまま利用される際は念のため、他社に類似ロゴがないか確認して下さい。
+  </p>
+
   <h3>トップページのスライドショーについて</h3>
   <p>cssフォルダのslide.cssで設定されています。</p>
-  <p><strong class="color1">css3に対応した環境でしか動作しません。</strong><br>
+  <p class="theme-color font-w-bold">css3に対応した環境でしか動作しません。</p>
+  <p>
     css3に対応していない古い環境（IEなら9以下）から見た場合に最後の画像だけ固定表示されてしまうので、head内に1.jpgが表示されるよう指定しています。1.jpg以外を表示させておきたいならこのhead内の画像読み込みのファイル名を変更して下さい。
   </p>
-  
-  <p><strong class="color1">画像を入れ替えたい場合</strong><br>
-  「1.jpg」「2.jpg」「3.jpg」の3枚の画像を用意してimagesフォルダに上書きして下さい。大きさはある程度大きければバラバラでも構いませんが、必ず「縦横比」を合わせて下さい。<br>
-  また、拡張子が「jpeg」や「JPG」と少し違った場合にうまく表示できない可能性があるので梱包画像の拡張子と合わせて下さい。拡張子を変更したい場合はhtml側を直接変更しても構いません。<br>
-  画像は容量が軽くなるようにできるだけ圧縮して下さい。容量が大きいと初動がガタつきます。</p>
-  <p><strong class="color1">ループを一回で終了したい場合</strong><br>
-  cssフォルダのslide.cssの、<br>
-  @keyframes slide3 {<br>
-  の、 <br>
-  95% {opacity: 0;}<br>
-  100% {opacity: 0;}<br>
-  を、以下に変更。<br>
-  95% {opacity: 1;}<br>
-  100% {opacity: 1;}</p>
+  <p class="theme-color font-w-bold">画像を入れ替えたい場合</p>
+  <p>
+    「1.jpg」「2.jpg」「3.jpg」の3枚の画像を用意してimagesフォルダに上書きして下さい。大きさはある程度大きければバラバラでも構いませんが、必ず「縦横比」を合わせて下さい。<br>
+    また、拡張子が「jpeg」や「JPG」と少し違った場合にうまく表示できない可能性があるので梱包画像の拡張子と合わせて下さい。拡張子を変更したい場合はhtml側を直接変更しても構いません。<br>
+    画像は容量が軽くなるようにできるだけ圧縮して下さい。容量が大きいと初動がガタつきます。
+  </p>
+  <p class="theme-color font-w-bold">ループを一回で終了したい場合</p>
+  <p>
+    cssフォルダのslide.cssの、<br>
+    @keyframes slide3 {<br>
+    の、 <br>
+    95% {opacity: 0;}<br>
+    100% {opacity: 0;}<br>
+    を、以下に変更。<br>
+    95% {opacity: 1;}<br>
+    100% {opacity: 1;}
+  </p>
   <p>続いて、<br>
-  .slide1,.slide2,.slide3 {<br>
-  の、<br>
-  animation-iteration-count:infinite;<br>
-  を以下に変更。<br>
-  animation-iteration-count:1;</p>
-  <p><strong class="color1">固定画像にしたい場合</strong><br>
-  cssフォルダのslide.cssを開き、冒頭の<br>
-  「/*CSSスライドショー設定」<br>
-  のブロックを削除。<br>
-  次に、index.htmlから使う画像だけを残してあとは削除。<br>
-  残した画像タグからclass指定（class=&quot;slide1&quot;などの）を外して下さい。<br>
-  画像を囲っているasideタグなどはレイアウト設定が入っているので削除しないよう注意して下さい。</p>
-  <p><strong class="color1">速度や枚数などの調整</strong><br>
-  cssフォルダのslide.cssで行って下さい。解説も入っています。<br>
-  <a href="https://template-party.com/tips/slide_css.html">スライドショーに関する詳しい使い方はこちら。</a></p>
-  <p><strong class="color1">その他</strong><br>
-  スライドショー画像の中央下部に現在表示中を示すボタンがついていますが、単に画像にボタンを重ねているだけです。<br>
-  スライドショーである点をわかりやすくするために入れているだけで、クリックするとその画像が出るというような動作はしません。</p>
+    .slide1,.slide2,.slide3 {<br>
+    の、<br>
+    animation-iteration-count:infinite;<br>
+    を以下に変更。<br>
+    animation-iteration-count:1;
+  </p>
+  <p class="theme-color font-w-bold">固定画像にしたい場合</p>
+  <p>
+    cssフォルダのslide.cssを開き、冒頭の<br>
+    「/*CSSスライドショー設定」<br>
+    のブロックを削除。<br>
+    次に、index.htmlから使う画像だけを残してあとは削除。<br>
+    残した画像タグからclass指定（class=&quot;slide1&quot;などの）を外して下さい。<br>
+    画像を囲っているasideタグなどはレイアウト設定が入っているので削除しないよう注意して下さい。
+  </p>  
+  <p class="theme-color font-w-bold">速度や枚数などの調整</p>
+  <p>
+    cssフォルダのslide.cssで行って下さい。解説も入っています。<br>
+    <a href="https://template-party.com/tips/slide_css.html">スライドショーに関する詳しい使い方はこちら。</a>
+  </p>  
+  <p class="theme-color font-w-bold">その他
+  <p>
+    スライドショー画像の中央下部に現在表示中を示すボタンがついていますが、単に画像にボタンを重ねているだけです。<br>
+    スライドショーである点をわかりやすくするために入れているだけで、クリックするとその画像が出るというような動作はしません。
+  </p>
   
   <h3>上部の「当院について」や「診療科目」メニューのプルダウンメニューについて</h3>
   <p>プルダウンメニューを新規で増やしたい場合、</p>
   <p>&lt;li&gt;&lt;a href=&quot;#&quot;&gt;親のメニュー名&lt;/a&gt;<br>
-  <span class="color1">　&lt;ul class=&quot;ddmenu&quot;&gt;<br>
+  <span class=class="theme-color font-w-bold">　&lt;ul class=&quot;ddmenu&quot;&gt;<br>
   　&lt;li&gt;&lt;a href=&quot;#&gt;プルダウン用のメニュー名&lt;/a&gt;&lt;/li&gt;<br>
   　&lt;li&gt;&lt;a href=&quot;#&gt;プルダウン用のメニュー名&lt;/a&gt;&lt;/li&gt; <br>
   　&lt;/ul&gt;</span><br>
-    &lt;/li&gt;</p>
+    &lt;/li&gt;
+  </p>
   <p>
-  のように、親となるリストタグ&lt;li&gt;〜&lt;/li&gt;の中にプルダウン用のメニューを加えて下さい。
+    のように、親となるリストタグ&lt;li&gt;〜&lt;/li&gt;の中にプルダウン用のメニューを加えて下さい。
     <br>class=&quot;ddmenu&quot;の指定でプルダウンメニューとして認識されます。親のリスト(li)タグの「中」にある必要があるので間違えないように注意して下さい。
   </p>
-  <p>プルダウン（マウスオン）に対応していない端末から見た場合、親メニューをクリックする事になるので、<span class="color1">必ず親メニューのリンク先は作っておいて下さい。</span></p>
+  <p>
+    プルダウン（マウスオン）に対応していない端末から見た場合、親メニューをクリックする事になるので、<span class=class="theme-color font-w-bold">必ず親メニューのリンク先は作っておいて下さい。</span>
+  </p>
   
   <h3>ページ内リンクについて</h3>
   <p>ヘッダーメニューが上部に固定表示される分、リンク先と重なってしまうのでそれを回避する必要があります。<br>
@@ -192,12 +259,12 @@
   <br><br><br><br><br><br><br>
   <span id="page" class="link"></span>ページ内リンク先です。<br>
     html側を見てもらえばわかりますが「<span
-  class="color1">class=&quot;link&quot;</span>」の指定が入っています。この「class=&quot;link&quot;」がある事で上部メニューに重ならないので入れ忘れないようにして下さい。<br><br><br><br><br><br><br>
+  class=class="theme-color font-w-bold">class=&quot;link&quot;</span>」の指定が入っています。この「class=&quot;link&quot;」がある事で上部メニューに重ならないので入れ忘れないようにして下さい。<br><br><br><br><br><br><br>
   </p>
   
   <h3>リストタグを使いたい場合の注意点</h3>
   <p>そのままではリストマークが出ませんので、リストタグを使う場合は以下のようなスタイルを追加して下さい。</p>
-  <p>&lt;ul  <span class="color1">class=&quot;disc&quot;</span>&gt;<br>
+  <p>&lt;ul  <span class=class="theme-color font-w-bold">class=&quot;disc&quot;</span>&gt;<br>
     &lt;li&gt;リストタグ&lt;/li&gt;<br>
     &lt;li&gt;リストタグ&lt;/li&gt;<br>
     &lt;li&gt;リストタグ&lt;/li&gt;<br>
@@ -222,7 +289,7 @@
   通常は、<br>
   &lt;li&gt;&lt;a href=&quot;&quot;&gt;メニュー名&lt;/a&gt;&lt;/li&gt;<br>
   のようになっていますがこれを、<br>
-  &lt;li  <span class="color1">class=&quot;current&quot;</span>&gt;・・・<br>
+  &lt;li  <span class=class="theme-color font-w-bold">class=&quot;current&quot;</span>&gt;・・・<br>
   とする事で色がつきます。自動で色がつくわけではないのでご注意下さい。</p>
   
   <h3>左右のブロックを入れ替えたい場合</h3>
