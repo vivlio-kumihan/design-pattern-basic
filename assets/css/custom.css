@@ -1,7 +1,6 @@
-
 /* /////////////////////////////////////////////////////////*/
 /* basic typograph */
-h1, h2, h3, h4, h5, h6, div, p, li, a, figcaption, .notice, .notice-gry {
+h1, h2, h3, h4, h5, h6, div, p, li, a, tt, td, dt, dd, figcaption, .notice, .notice-gry {
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.2rem;
 }
@@ -14,11 +13,57 @@ a, table {
   color: rgba(83, 56, 62, 1);
 }
 
+ul {
+
+}
+
+/* li.pre-maru {
+  margin-left: 1rem;
+  line-height: 1.5rem;
+  list-style-type: disc ;
+} */
+
+.pre-maru {
+  margin-left: 1rem;
+  line-height: 1.5rem;
+}
+
+.pre-maru:before {
+    content:  "";
+    width:  0.8rem;
+    height:  0.8rem;
+    display:  inline-block;
+    background-color: #ff9999;
+    border-radius:  50%;
+    position:  relative;
+    top: 0.05rem;
+    margin-right: 0.5rem; 
+}
+
+dt {
+  float: left;
+  width: 120px;
+}
+
+dt, dd {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  line-height: 2rem;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.3);
+}
+
 .pre-blank {
   margin: 15px 0px 0px;
 }
 .below-blank {
   margin: 0px 0px 15px;
+}
+
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
 }
 
 .fl-right {
@@ -340,6 +385,28 @@ ul.row-list li:first-child a {
   border-left: 1px solid  rgba(153, 153, 153, 1);
 }
 
+.cards {
+  display: flex;
+}
+.card-contents {
+  width: 400px;
+  height: auto;
+  margin: 0 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.5); 
+  /* inset */
+}
+
+.card-contents p {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  line-height: 1.1rem;
+}
+.card-contents img {
+  width: 100%;
+}
+
 /* /////////////////////////////////////////////////////////*/
 aside {
   float: left;
@@ -407,6 +474,25 @@ table th, table td {
 /* params lineを後ろに書かないと罫線が消える。 */
 table th {
   background: #fffbe3;
+}
+
+table.main {
+  margin: 0px;
+}
+
+table.main td {
+  padding: 10px 0;
+}
+
+.tab-index {
+  /* margin-bottom: 0px; */
+  width: auto;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+  background-color: cadetblue;
+  border-radius: 10px 10px 0px 0px;
 }
 
 /* /////////////////////////////////////////////////////////*/
