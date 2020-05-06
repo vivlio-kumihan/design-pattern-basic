@@ -1,4 +1,82 @@
 /* /////////////////////////////////////////////////////////*/
+/* layout */
+.main-container {
+  width: auto;
+  margin: 0px 20px;
+}
+
+@media (min-width: 60em) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6";
+    column-gap: 20px;
+    /* margin-bottomで20pxとらないとスマホ表示でカードがダブルってしまう問題 */
+    /* row-gap: 20px; */
+  }
+}
+
+.card1 {
+  grid-area: card1;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.5);
+  border-radius: 10px;
+}
+.card2 {
+  grid-area: card2;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.5);
+  border-radius: 10px;
+}
+.card3 {
+  grid-area: card3;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.5);
+  border-radius: 10px;
+}
+.card4 {
+  grid-area: card4;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.5);
+  border-radius: 10px;
+}
+.card5 {
+  grid-area: card5;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.5);
+  border-radius: 10px;
+}
+.card6 {
+  grid-area: card6;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.5);
+  border-radius: 10px;
+}
+
+.grid h4 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ff9999;
+}
+
+.box {
+  overflow: hidden;
+  border: 3px solid #ff9999;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 /* basic typograph */
 h1, h2, h3, h4, h5, h6, div, p, li, a, tt, td, dt, dd, figcaption, .notice, .notice-gry {
   font-family: 'Noto Sans JP', sans-serif;
@@ -64,6 +142,12 @@ dt, dd {
 }
 .align-center {
   text-align: center;
+}
+
+.align-below {
+  position: absolute;
+  bottom: 0px;
+  left: 20%;
 }
 
 .fl-right {
@@ -142,7 +226,7 @@ header {
   position: relative;
 	height: 170px;	/*ヘッダーの高さ*/
   /*背景画像の読み込み。左から70%、上下中央に配置。幅700px。*/
-  background: url(/images/header_bg.jpg) no-repeat 80% center / 800px;
+  background: url(/img/header_bg.jpg) no-repeat 80% center / 800px;
 }
 
 header #logo img {
@@ -168,7 +252,7 @@ header #logo img {
   font-size: 2rem;
   padding-left: 45px;
   color: #ff9999;
-  background: url(../images/icon_tel.png) no-repeat left center / 40px;
+  background: url(../img/icon_tel.png) no-repeat left center / 40px;
 }
 
 #address {
@@ -188,7 +272,7 @@ header #logo img {
   font-size: 2rem;
   padding-left: 45px;
   color: #ff9999;
-  background: url(../images/icon_tel.png) no-repeat left center / 40px;
+  background: url(../img/icon_tel.png) no-repeat left center / 40px;
 }
 
 /* /////////////////////////////////////////////////////////*/
@@ -449,7 +533,7 @@ aside .aside-link li {
 aside .aside-link li a {
     display: block;
     padding: 10px 10px 10px 30px;
-    background: #fff url(../images/arrow2.png) no-repeat 10px center / 10px;
+    background: #fff url(../img/arrow2.png) no-repeat 10px center / 10px;
 }
 
 aside .aside-info {
