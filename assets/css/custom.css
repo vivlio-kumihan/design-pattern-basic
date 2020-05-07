@@ -66,21 +66,72 @@
   font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
-  color: #ff9999;
+  color: rgba(255, 153, 153, 1);
 }
+
+@media (max-width: 60em) {
+  .card-grid {
+    display: card-grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "img h4"
+      "p p";
+  }
+}
+
+card-grid img {
+  grid-area: img;
+}
+
+card-grid h4 {
+  grid-area: h4;
+}
+
+card-grid p {
+  grid-area: p;
+}
+
+
 
 .box {
   overflow: hidden;
-  border: 3px solid #ff9999;
+  border: 2.5px solid rgba(255, 153, 153, 0.6);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+.box h4 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(255, 153, 153, 1);
+}
+
+#new-patient .box {
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+
+.arrow-blow {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.arrow-blow img {
+  width: 100px;
+  height: auto;
 }
 
 /* basic typograph */
 h1, h2, h3, h4, h5, h6, div, p, li, a, tt, td, dt, dd, figcaption, .notice, .notice-gry {
   font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.2rem;
+}
+
+#greeting p {
+  padding: 0px 2rem;
 }
 
 a {
@@ -111,24 +162,48 @@ ul {
     width:  0.8rem;
     height:  0.8rem;
     display:  inline-block;
-    background-color: #ff9999;
+    background-color: rgba(255, 153, 153, 1);
     border-radius:  50%;
     position:  relative;
     top: 0.05rem;
     margin-right: 0.5rem; 
 }
 
-dt {
+.index-dl dt {
   float: left;
   width: 120px;
 }
 
-dt, dd {
+.index-dl dt, .index-dl dd {
   margin-left: 1rem;
   padding-left: 1rem;
   line-height: 2rem;
   border-bottom: 1px solid rgba(30, 30, 30, 0.3);
 }
+
+.faq {
+    padding: 0px 20px;
+}
+
+.faq dt {
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: rgba(255, 153, 153, 1);
+  padding-left: 30px;
+  background: url(/img/faq_q.png) no-repeat left -6px / 35px;
+}
+
+.faq dd {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: rgba(30, 30, 30, 0.8);
+  border-bottom: 1px solid rgba(30, 30, 30, 0.5);
+  background: url(/img/faq_a.png) no-repeat left -2px / 35px;
+}
+
 
 .pre-blank {
   margin: 15px 0px 0px;
@@ -176,11 +251,11 @@ figcaption {
   font-size: 0.8rem;
   font-weight: 700;
   line-height: 1.1rem;
-  color: #ff9999;
+  color: rgba(255, 153, 153, 1);
 }
 
 .theme-color {
-  color: #ff9999;
+  color: rgba(255, 153, 153, 1);
 }
 
 .notice {
@@ -251,7 +326,7 @@ header #logo img {
 #header-address span {
   font-size: 2rem;
   padding-left: 45px;
-  color: #ff9999;
+  color: rgba(255, 153, 153, 1);
   background: url(../img/icon_tel.png) no-repeat left center / 40px;
 }
 
@@ -271,7 +346,7 @@ header #logo img {
 #address .tel {
   font-size: 2rem;
   padding-left: 45px;
-  color: #ff9999;
+  color: rgba(255, 153, 153, 1);
   background: url(../img/icon_tel.png) no-repeat left center / 40px;
 }
 
@@ -293,7 +368,7 @@ nav #floating li a {
   text-align: center;
   color: #fff;
   border-left: 1px dashed rgba(255,255,255,0.4);
-  background: #ff9999;
+  background: rgba(255, 153, 153, 1);
 }
 /* 両端のセル */
 nav #floating li:first-child a {
@@ -416,7 +491,7 @@ main h2 {
   font-size: 1.2rem;
   font-weight: 800;
   color: #fff;
-  background: #ff9999;
+  background: rgba(255, 153, 153, 1);
   border-radius: 10px;
 }
 
@@ -436,7 +511,7 @@ main h3 {
 }
 
 main h3::first-letter {
-  border-left: 4px solid #ff9999;
+  border-left: 4px solid rgba(255, 153, 153, 1);
   padding-left: 10px;
 }
 
@@ -464,10 +539,21 @@ ul.row-list li a {
   border-right: 1px solid rgba(153, 153, 153, 1);
 }
 
+ul.row-list li.current a {
+  font-weight: 700;
+  color: rgba(153, 153, 153, 1);
+}
+
 ul.row-list li:first-child a {
-  color:  rgba(153, 153, 153, 1);
+  /* color:  rgba(153, 153, 153, 1); */
   border-left: 1px solid  rgba(153, 153, 153, 1);
 }
+
+/* 最初のリストだけあしらいを変えるスマートな方法 */
+/* ul.row-list li:first-child a {
+  color:  rgba(153, 153, 153, 1);
+  border-left: 1px solid  rgba(153, 153, 153, 1);
+} */
 
 .cards {
   display: flex;
@@ -509,7 +595,7 @@ aside h2 {
 }
 
 aside h2::first-letter {
-    border-left: 3px solid #ff9999;
+    border-left: 3px solid rgba(255, 153, 153, 1);
     padding-left: 10px;
 }
 
@@ -579,6 +665,38 @@ table.main td {
   border-radius: 10px 10px 0px 0px;
 }
 
+table.access-table {
+  margin: 0px;
+}
+
+caption.tab-index, #greeting table caption.tab-index {
+  padding: 10px 0px;
+}
+
+.access-table th, #greeting table th {
+  width: 15%;
+  padding: 15px 0;
+  text-align: center;
+  background-color: white;
+}
+
+
+.access-table td {
+  width: 85%;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+}
+
+.access-table .access-img {
+  margin-top: 15px;
+}
+
+.access-table td img {
+  max-width: 100;
+  vertical-align: middle;
+}
+
 /* /////////////////////////////////////////////////////////*/
 footer {
   margin-top: 20px;
@@ -586,7 +704,7 @@ footer {
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
   background: rgba(30, 30, 30, 0.95);
-  border-top: 5px solid #ff9999;
+  border-top: 5px solid rgba(255, 153, 153, 1);
 }
 
 footer a {
@@ -658,7 +776,7 @@ footer li a {
 }
 
 footer li a:hover {
-  background: linear-gradient(transparent 0%, #ff9999 0%);
+  background: linear-gradient(transparent 0%, rgba(255, 153, 153, 1) 0%);
 }
 
 footer #footer-copyright {
