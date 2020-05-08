@@ -1,9 +1,5 @@
-Here is my HTML & CSS study by Node.js.
+Here is my HTML & CSS learning site by Node.js.
 
-### 200426
+### 200508
 
-ヘッダーとフッターの制作中。ドロップダウンメニューで苦戦している。
-なぜか緑が付かない。結構意地になるね。
-
-`git config --global user.email`
-で変更をしてみた。
+初稿アップ
