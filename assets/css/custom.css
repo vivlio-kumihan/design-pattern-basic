@@ -739,9 +739,10 @@ footer #footer-info img {
 footer #footermenu {
   clear: both;
   overflow: hidden;
-  font-size: 80%;
-  margin-left: -1%;
+  width: 90%;
+  margin: 0 auto;
   padding: 20px 0;
+  font-size: 80%;
 }
 
 footer #footermenu ul {

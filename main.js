@@ -78,7 +78,13 @@ router.get("/greeting", (req, res) => {
     res.render("about/greeting");
 });
 router.get("/department", (req, res) => {
-    res.render("department");
+    res.render("department/index");
+});
+router.get("/internal", (req, res) => {
+  res.render("department/internal");
+});
+router.get("/neuros", (req, res) => {
+  res.render("department/neuros");
 });
 router.get("/staff", (req, res) => {
     res.render("staff");
