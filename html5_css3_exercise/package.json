@@ -1,0 +1,21 @@
+{
+  "name": "html5_css3_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "Takahiro Nobuyuki",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.13",
+    "uglify-js": "^3.9.2"
+  }
+}
