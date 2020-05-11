@@ -1,5 +1,389 @@
-@import url(fontawesome-all.min.css);
+/* ///////////////////////////////////////// fonts */
+
+/* 書体 */
+
+@import url(all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900");
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900");
 
+/* ///////////////////////////////////////// Type */
+
+/* 本文 */
+
+/* body可変による本文の調整 */
+@media screen and (max-width: 1680px) {
+  body, input, select, textarea {
+    font-size: 15pt; } 
+}
+
+@media screen and (max-width: 1280px) {
+  body, input, select, textarea {
+    font-size: 13pt; } 
+}
+
+@media screen and (max-width: 360px) {
+  body, input, select, textarea {
+    font-size: 11pt; } 
+}
+
+body, input, select, textarea {
+  color: rgba(105, 115, 120, 1);
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 15pt;
+  font-weight: 300;
+  line-height: 1.5; 
+  word-wrap: break-word;
+}
+
+a {
+  /* border-bottom: dotted 1px; */
+  color: rgba(245, 105, 105, 1);
+  text-decoration: none; 
+}
+/* !importantでhoverした時のbehaviorを
+強制的にこちらに誘導する。 */
+a:hover {
+  border-bottom-color: rgba(220, 70 ,70, 1);
+  color: rgba(220, 70 ,70, 1) !important; 
+}
+a:hover strong {
+  color: inherit; 
+}
+
+ul {
+  font-size: 0.9em;
+  line-height: 1.4em;
+  list-style: disc;
+  margin: 0 0 2em 1em;
+  padding-left: -1em;
+}
+
+strong, b {
+  color: rgba(61, 68, 73, 1);
+  font-weight: 700; 
+}
+
+/* ///////////////////////////////////////// wrapper */
+
+#wrapper {
+  /* 下の設定のレイアウト意図が解らないのでpending。 */
+  /* display: flex;
+  flex-direction: row-reverse;
+  min-height: 100vh;  */
+}
+
+
+/* ///////////////////////////////////////// header */
+
+#header {
+  display: flex;
+  padding: 6em 0 1em 0;
+  border-bottom: solid 5px #f56a6a;
+}
+
+#header > * {
+  flex: 1;
+  margin-bottom: 0; 
+}
+
+/* logo */
+#header .logo {
+  position: relative; 
+  border-bottom: 0;
+  color: inherit;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.125em; 
+}
+
+/* icon */
+.icon {
+  text-align: right;
+}
+
+a.fab {
+  margin-left: 10px;
+  color: inherit;
+}
+
+@media screen and (max-width: 1680px) {
+  #header {
+    padding-top: 5em;
+  } 
+}
+  
+@media screen and (max-width: 736px) {
+  #header {
+    padding-top: 6.5em; 
+  }
+  #header .logo {
+    font-size: 1.25em;
+    margin: 0; 
+  }
+  #header .icons {
+    position: absolute;
+    height: 5em;
+    line-height: 5em;
+    right: -0.5em;
+    top: 0; 
+  } 
+}
+
+/* ///////////////////////////////////////// main */
+
+#main > .inner {
+  padding: 0 6em 0.1em 6em;
+  margin: 0 auto;
+  max-width: 110em;
+}
+
+@media screen and (max-width: 1680px) {
+  #main > .inner {
+    padding: 0 5em 0.1em 5em;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #main > .inner {
+    padding: 0 4em 0.1em 4em;
+  }
+}
+
+/* ///////////////////////////////////////// body */
+
+body {
+  background: rgba(255, 255, 255, 1); 
+}
+
+/* 
+@media screen and (max-width: 1680px) {
+  #header { padding-top: 5em; } 
+}
+
+@media screen and (max-width: 736px) {
+  #header { padding-top: 6.5em; }
+  #header .logo {
+      font-size: 1.25em;
+      margin: 0; 
+  }
+  #header .icons {
+      height: 5em;
+      line-height: 5em;
+      position: absolute;
+      right: -0.5em;
+      top: 0; 
+  }
+} 
+*/
+/* ///////////////////////////////////////// main */
+
+#main {
+  flex-shrink: 1;
+  width: 100%; 
+}
+
+#main > .inner {
+  padding: 0 6em 0.1em 6em ;
+  margin: 0 auto;
+  max-width: 110em; 
+}
+
+#main > .inner > section {
+  padding: 6em 0 4em 0 ;
+  border-top: solid 2px rgba(210, 215, 217, 0.75); 
+}
+
+#main > .inner > section:first-of-type {
+  border-top: 0 !important;
+}
+
+@media screen and (max-width: 1680px) {
+  #main > .inner {
+    padding: 0 5em 0.1em 5em ; 
+  }
+  #main > .inner > section {
+    padding: 5em 0 3em 0 ; 
+  } 
+}
+
+@media screen and (max-width: 1280px) {
+  #main > .inner {
+    padding: 0 4em 0.1em 4em ; 
+  }
+  #main > .inner > section {
+    padding: 4em 0 2em 0 ; 
+  } 
+}
+
+@media screen and (max-width: 736px) {
+  #main > .inner {
+    padding: 0 2em 0.1em 2em ; 
+  }
+  #main > .inner > section {
+      padding: 3em 0 1em 0 ; 
+  } 
+}
+
+
+
+
+
+/* 
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+ */
+
+/* 
+body.is-preload *, body.is-preload *:before, body.is-preload *:after, 
+body.is-resizing *, body.is-resizing *:before, body.is-resizing *:after {
+  animation: none !important;
+  transition: none !important; 
+}
+ */
+
+
+
+/* 
+em, i {
+  font-style: italic; }
+ */
+/* p {
+  margin: 0 0 2em 0; } */
+/* 
+h1, h2, h3, h4, h5, h6 {
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 1em 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 0; }
+ */
+
+/*     
+h1 {
+  font-size: 4em;
+  margin: 0 0 0.5em 0;
+  line-height: 1.3; }
+
+h2 {
+  font-size: 1.75em; }
+
+h3 {
+  font-size: 1.25em; }
+
+h4 {
+  font-size: 1.1em; }
+
+h5 {
+  font-size: 0.9em; }
+
+h6 {
+  font-size: 0.7em; }
+ */
+
+  
+/* @media screen and (max-width: 1680px) {
+  h1 {
+    font-size: 3.5em; } }
+
+@media screen and (max-width: 980px) {
+  h1 {
+    font-size: 3.25em; } }
+
+@media screen and (max-width: 736px) {
+  h1 {
+    font-size: 2em;
+    line-height: 1.4; }
+  h2 {
+    font-size: 1.5em; } }
+
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+ */
+
+
+/* ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  -webkit-text-size-adjust: none; }
+
+mark {
+  background-color: transparent;
+  color: inherit; }
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input, select, textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none; }
+ */
+
+/* sub {
+  font-size: 0.8em;
+  position: relative;
+  top: 0.5em; } */
+
+/* sup {
+  font-size: 0.8em;
+  position: relative;
+  top: -0.5em; } */
+
+/* blockquote {
+  border-left: solid 3px rgba(210, 215, 217, 0.75);
+  font-style: italic;
+  margin: 0 0 2em 0;
+  padding: 0.5em 0 0.5em 2em; } */
+
+/* code {
+  background: rgba(230, 235, 237, 0.25);
+  border-radius: 0.375em;
+  border: solid 1px rgba(210, 215, 217, 0.75);
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 0 0.25em;
+  padding: 0.25em 0.65em; } */
+
+/* pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 0 0 2em 0; }
+  pre code {
+    display: block;
+    line-height: 1.75;
+    padding: 1em 1.5em;
+    overflow-x: auto; } */
+
+/* hr {
+  border: 0;
+  border-bottom: solid 1px rgba(210, 215, 217, 0.75);
+  margin: 2em 0; }
+  hr.major {
+    margin: 3em 0; } */
