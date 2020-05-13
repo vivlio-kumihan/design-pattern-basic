@@ -18,11 +18,13 @@
 
 <body class="is-preload">
   <div id="wrapper">
-    <header id="header">
-      <%- include("partials/header") %>
-    </header>
     <div id="main">
-      <%- body %>
+      <div class="inner">
+        <header id="header">
+          <%- include("partials/header") %>
+        </header>
+        <%- body %>
+      </div>
     </div>
     <div id="sidebar">
       <%- include("partials/sidebar") %>

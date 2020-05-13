@@ -11,30 +11,48 @@
 
 /* 本文 */
 
-/* body可変による本文の調整 */
-@media screen and (max-width: 1680px) {
-  body, input, select, textarea {
-    font-size: 15pt; } 
-}
-
-@media screen and (max-width: 1280px) {
-  body, input, select, textarea {
-    font-size: 13pt; } 
-}
-
-@media screen and (max-width: 360px) {
-  body, input, select, textarea {
-    font-size: 11pt; } 
-}
-
 body, input, select, textarea {
   color: rgba(105, 115, 120, 1);
   font-family: "M PLUS 1p", sans-serif;
-  font-size: 15pt;
+  font-size: 14pt;
   font-weight: 300;
   line-height: 1.5; 
   word-wrap: break-word;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "M PLUS 1p", sans-serif;
+  margin: 0 0 1em 0;
+  line-height: 1.3;
+  font-weight: 800;
+  color: rgba(60, 70, 75, 1);
+}
+
+h1 {
+  font-size: 4em;
+  margin: 0 0 0.25em 0;
+}
+
+h2 { font-size: 1.75em; }
+
+h3 { font-size: 1.25em; }
+
+h4 { font-size: 1.1em; }
+
+h5 { font-size: 0.9em; }
+
+h6 { font-size: 0.7em; }
+
+.inner h1 { line-height: 1em; }
+
+.inner h2 {
+    border-bottom: solid 3px #f56a6a;
+    display: inline-block;
+    margin: 0 0 2em 0;
+    padding: 0 0.75em 0.5em 0;
+}
+
+p { margin: 0 0 2em 0; }
 
 a {
   /* border-bottom: dotted 1px; */
@@ -64,15 +82,91 @@ strong, b {
   font-weight: 700; 
 }
 
-/* ///////////////////////////////////////// wrapper */
 
-#wrapper {
-  /* 下の設定のレイアウト意図が解らないのでpending。 */
-  /* display: flex;
-  flex-direction: row-reverse;
-  min-height: 100vh;  */
+/* ///////////////////////////////////////// body */
+body {
+  background: rgba(255, 255, 255, 1); 
 }
 
+/* screen size more than 751px */
+@media screen and (min-width: 751px)  {
+  body, input, select, textarea {
+    font-size: 15pt;
+  }
+  #main > .inner {
+    padding: 0 5em 0.1em 5em ; 
+  }
+  #main > .inner > section {
+    padding: 5em 0 3em 0 ; 
+  }
+}
+
+/* screen size more than 361px, less than 750px */
+@media screen and (min-width: 361px) and (max-device-width: 750px) {
+  body, input, select, textarea {
+    font-size: 13pt;
+  }
+  #main > .inner {
+    padding: 0 4em 0.1em 4em ; 
+  }
+  #main > .inner > section {
+    padding: 4em 0 2em 0 ; 
+  } 
+}
+
+/* screen size more less than 360px */
+@media screen and (min-width: 0px) and (max-device-width: 360px) {
+  body, input, select, textarea {
+    font-size: 10pt;
+  }
+  #main > .inner {
+    padding: 0 2em 0.1em 2em ; 
+  }
+  #main > .inner > section {
+    padding: 3em 0 1em 0 ; 
+  } 
+}
+
+
+
+
+/* ///////////////////////////////////////// wrapper */
+/* flex-direction: row　デフォルト　上〜下を右〜左に変える */
+/* flex-direction: row-reverse　上〜下を左〜右に変える */
+#wrapper {
+  /* display: flex; */
+  /* flex-direction: row-reverse; */
+  /* min-height: 100vh; */
+}
+
+/* ///////////////////////////////////////// main */
+
+#main {
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+  width: 100%;
+}
+
+#main > .inner {
+  padding: 0 6em 0.1em 6em;
+  margin: 0 auto;
+  max-width: 110em;
+}
+
+/* 可変の設定は一旦pending */
+/* 
+@media screen and (max-width: 1680px) {
+  #main > .inner {
+    padding: 0 5em 0.1em 5em;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #main > .inner {
+    padding: 0 4em 0.1em 4em;
+  }
+}
+ */
 
 /* ///////////////////////////////////////// header */
 
@@ -80,6 +174,7 @@ strong, b {
   display: flex;
   padding: 6em 0 1em 0;
   border-bottom: solid 5px #f56a6a;
+  border: 1px solid black;
 }
 
 #header > * {
@@ -100,59 +195,11 @@ strong, b {
 .icon {
   text-align: right;
 }
-
+/* originはリスト構造になっていたが、
+tagづけを試しにanchorでやっている。 */
 a.fab {
   margin-left: 10px;
   color: inherit;
-}
-
-@media screen and (max-width: 1680px) {
-  #header {
-    padding-top: 5em;
-  } 
-}
-  
-@media screen and (max-width: 736px) {
-  #header {
-    padding-top: 6.5em; 
-  }
-  #header .logo {
-    font-size: 1.25em;
-    margin: 0; 
-  }
-  #header .icons {
-    position: absolute;
-    height: 5em;
-    line-height: 5em;
-    right: -0.5em;
-    top: 0; 
-  } 
-}
-
-/* ///////////////////////////////////////// main */
-
-#main > .inner {
-  padding: 0 6em 0.1em 6em;
-  margin: 0 auto;
-  max-width: 110em;
-}
-
-@media screen and (max-width: 1680px) {
-  #main > .inner {
-    padding: 0 5em 0.1em 5em;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  #main > .inner {
-    padding: 0 4em 0.1em 4em;
-  }
-}
-
-/* ///////////////////////////////////////// body */
-
-body {
-  background: rgba(255, 255, 255, 1); 
 }
 
 /* 
@@ -180,6 +227,7 @@ body {
 #main {
   flex-shrink: 1;
   width: 100%; 
+  border: 5px solid black
 }
 
 #main > .inner {
@@ -197,36 +245,44 @@ body {
   border-top: 0 !important;
 }
 
-@media screen and (max-width: 1680px) {
-  #main > .inner {
-    padding: 0 5em 0.1em 5em ; 
-  }
-  #main > .inner > section {
-    padding: 5em 0 3em 0 ; 
-  } 
+/* ///////////////////////////////////////// inner */
+.inner {
+  border: 1px solid blue;
 }
 
-@media screen and (max-width: 1280px) {
-  #main > .inner {
-    padding: 0 4em 0.1em 4em ; 
-  }
-  #main > .inner > section {
-    padding: 4em 0 2em 0 ; 
-  } 
+/* ///////////////////////////////////////// banner */
+#bannar {
+  display: flex;
 }
 
-@media screen and (max-width: 736px) {
-  #main > .inner {
-    padding: 0 2em 0.1em 2em ; 
-  }
-  #main > .inner > section {
-      padding: 3em 0 1em 0 ; 
-  } 
+#banner .content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 50%;
 }
 
+#banner .image {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: block;
+    margin: 0 0 2em 4em;
+    width: 50%;
+}
+#banner .image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
 
-
-
+/* 
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 2em -3em;
+    width: calc(100% + 3em);
+}
+ */
 
 /* 
 html {
