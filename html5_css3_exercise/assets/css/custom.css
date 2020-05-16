@@ -423,6 +423,7 @@ article .content {
 /* ////////////////////////////// posts > article */
 .posts {
   display: flex;
+  position: relative;
   flex-flow: row wrap;
   margin: 0 0 2em -6em;
   width: calc(100% + 6em);
@@ -434,11 +435,30 @@ article .content {
   margin: 0 0 6em 6em;
 }
 
+/* .posts > * :nth-child(2n + 1) {
+    width: 100%;
+    border-left: 1px solid rgba(210, 215, 217, 0.75);
+} */
+
 .posts img {
   width: 100%;
   height: auto;
 }
 
+.posts > article:nth-child(2n) {
+  border-left: 1px solid rgba(210, 215, 217, 1);
+  padding-left: -3em;
+}
+
+.posts article:after {
+    background: rgba(210, 215, 217, 0.75);
+    bottom: -3em;
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    right: 0;
+}
 /* 
 html {
   box-sizing: border-box; }
