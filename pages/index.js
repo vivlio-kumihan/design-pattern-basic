@@ -1,9 +1,11 @@
-import HelloWorld from '../components/hello-world'
+import Layout from '../components/layout'
 
 export default function Home() {
   return (
-    <div className="app">
-      <HelloWorld />
-    </div>
+    <Layout>
+      <h1>
+        main contetns
+      </h1>
+    </Layout>
   )
 }
