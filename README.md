@@ -1,3 +1,6 @@
+* 200803
+  * tmpディレクトリをdeployしない設定にしてテスト。
+
 # Example app with next-sass
 
 This example demonstrates how to use Next.js' built-in Global Sass/Scss imports and Component-Level Sass/Scss modules support.
