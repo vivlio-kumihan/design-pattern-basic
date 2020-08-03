@@ -1,13 +1,14 @@
-$color: red;
+$background-color: white;
+$font-color: rgba(80, 80, 80, 1);
 
 .container {
-  background-color: $color;
+  background-color: $background-color;
 }
 
 .headerContents {
-  color: white;
+  color: $font-color;
 }
 
 .mainContents {
-  color: white
+  color: $font-color;
 }

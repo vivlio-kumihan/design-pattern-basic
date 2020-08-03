@@ -9,6 +9,8 @@
 
 import Head from "next/head"
 import Link from "next/link"
+import Header from "./header"
+import Footer from "./footer"
 import layoutStyle from "./layout.module.scss"
 // import utilStyle from "../styles/util.module.css"
 
@@ -21,30 +23,11 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/profile_image_Apple.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="HTML5+CSS3 WEB SITE 構築のためのサンプル" />
+        <script src="https://kit.fontawesome.com/7565fc2928.js" crossorigin="anonymous"></script>
       </Head>
-      <header className={layoutStyle.headerContents}>
-        header
-        {/* <div className={layoutStyle.headerLogo}>
-          <img src="/images/nishipri-logo.png" width="500px" alt="logo" />
-        </div>
-        <nav className={layoutStyle.mainNav}>
-          <Link href="/">
-            <a>HOME</a>
-          </Link>
-          <Link href="/company">
-            <a>COMPANY</a>
-          </Link>
-          <Link href="/access">
-            <a>ACCESS</a>
-          </Link>
-          <Link href="/contact">
-            <a>CONTACT</a>
-          </Link>
-          <Link href="/blog">
-          <a>BLOG</a>
-          </Link>
-        </nav> */}
-      </header>
+
+      <Header />
+
       <main className={layoutStyle.mainContents}>
         {children}
         {!home && (
@@ -55,6 +38,8 @@ export default function Layout({ children, home }) {
           </div>
         )}
       </main>
+      
+      <Footer />
     </div>
   )
 }
