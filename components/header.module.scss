@@ -1,7 +1,27 @@
-.icons {
-  text-align: right;
+@import "../styles/global.scss";
+
+.logo {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: $font-color-07;
+  strong {
+    font-weight: 800;
+    color: $font-color-10;
+  }
 }
 
-.fa {
-  ;
+a:hover{
+  text-decoration: none;
+}
+
+.fab {
+  margin-left: 1rem;
+  color: $font-color-10;
+}
+
+.hello {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: $main-color;
 }

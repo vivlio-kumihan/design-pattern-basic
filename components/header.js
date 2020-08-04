@@ -1,5 +1,7 @@
 import Link from "next/link"
 import headerStyle from "./header.module.scss"
+import "../styles/styles.scss"
+
 
 export default function Header() {
   return (
@@ -9,15 +11,7 @@ export default function Header() {
           <strong>Editorial</strong> by HTML5 UP
         </a>
       </Link>
-      <ul className={headerStyle.icons}>
-        <i className="fas fa-coffee"></i>
-        <i className="fas fa-file-signature"></i>
-        <i className="fas fa-question-circle"></i>
-        <i className="fab fa-twitter-square"></i>
-        <i className="fab fa-facebook-square"></i>
-        <i className="fab fa-google"></i>
-        <i className="fab fa-instagram-square"></i>
-        <i className="fab fa-slack"></i>
+      <ul>
         <Link href="#"><a><i className="fab fa-twitter" /></a></Link>
         <Link href="#"><a><i className="fab fa-facebook-f" /></a></Link>
         <Link href="#"><a><i className="fab fa-google" /></a></Link>
@@ -27,6 +21,5 @@ export default function Header() {
     </div>
   )
 }
-
 
   

@@ -1,5 +1,7 @@
+// fontawsome+next.js+sassの組み合わせで
+// アプリを制作した場合必要な設定。
 const withSass = require("@zeit/next-sass")
-const withFonts = require("next-fonts")
+const withFonts = require("next-fonts");
 
 module.exports = withFonts(
   withSass({
@@ -9,3 +11,8 @@ module.exports = withFonts(
     }
   })
 )
+
+module.exports = withSass({
+  // SassでCSS Modulesを効かせる。
+  cssModules: true
+})
