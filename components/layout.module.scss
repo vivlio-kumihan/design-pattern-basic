@@ -1,14 +1,16 @@
+@import "../styles/global.scss";
+
 $background-color: white;
 $font-color: rgba(80, 80, 80, 1);
 
 .container {
-  background-color: $background-color;
+  
 }
 
 .headerContents {
-  color: $font-color;
+  color: $font-color-07;
 }
 
 .mainContents {
-  color: $font-color;
+  color: $font-color-07;
 }

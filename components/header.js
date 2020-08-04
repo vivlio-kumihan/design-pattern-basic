@@ -1,7 +1,11 @@
 import Link from "next/link"
 import headerStyle from "./header.module.scss"
-import "../styles/styles.scss"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faApple } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
+import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+import { faSlack } from '@fortawesome/free-brands-svg-icons'
 
 export default function Header() {
   return (
@@ -12,11 +16,11 @@ export default function Header() {
         </a>
       </Link>
       <ul>
-        <Link href="#"><a><i className="fab fa-twitter" /></a></Link>
-        <Link href="#"><a><i className="fab fa-facebook-f" /></a></Link>
-        <Link href="#"><a><i className="fab fa-google" /></a></Link>
-        <Link href="#"><a><i className="fab fa-instagram-square" /></a></Link>
-        <Link href="#"><a><i className="fab fa-slack" /></a></Link>
+        <Link href="#"><a><FontAwesomeIcon icon={faTwitter} /></a></Link>
+        <Link href="#"><a><FontAwesomeIcon icon={faFacebookF} /></a></Link>
+        <Link href="#"><a><FontAwesomeIcon icon={faApple} /></a></Link>
+        <Link href="#"><a><FontAwesomeIcon icon={faSlack} /></a></Link>
+        <Link href="#"><a><FontAwesomeIcon icon={faInstagramSquare} /></a></Link>
       </ul>
     </div>
   )

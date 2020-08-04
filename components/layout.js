@@ -3,9 +3,6 @@ import Link from "next/link"
 import Header from "./header"
 import Footer from "./footer"
 import layoutStyle from "./layout.module.scss"
-// styles.scssの内容をglobal.scssに移す。
-// global.scssなのでここで宣言の必要ななし。
-import "../styles/styles.scss"
 
 export const siteTitle = "HTML5+CSS3 Basic Sample"
 
