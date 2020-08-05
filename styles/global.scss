@@ -1,8 +1,10 @@
-// Fonts
+//// Fonts
 // M PLUS
+// font-family: "M PLUS 1p", sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900");
 
 // Roboto Slab
+// font-family: 'Roboto Slab', serif;
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
@@ -13,38 +15,27 @@
 // @import "./fontawesome/solid";
 
 $main-color: rgba(245, 106, 106, 1);
-$font-color-10: rgba(80, 80, 80, 1);
-$font-color-07: rgba(80, 80, 80, 0.7);
+$key-color-gray10: rgba(80, 80, 80, 1);
+$key-color-gray07: rgba(80, 80, 80, 0.7);
+$key-color-gray03: rgba(80, 80, 80, 0.3);
 
-// .container {
-//   background-color: $background-color;
-// }
-
-// .headerContents {
-//   color: $font-color-07;
-// }
-
-// .mainContents {
-//   color: $font-color-07;
-// }
-
-/* Font */
-/* 本文 */
+// Font
+// 本文
 body, input, select, textarea {
   font-family: "M PLUS 1p", sans-serif;
   font-size: 5mm;
   font-weight: 300;
   line-height: 1.7; 
-  color: $font-color-07;
+  color: $key-color-gray07;
 }
 
-/* 見出し */
+// 見出し
 h1, h2, h3, h4, h5, h6 {
   font-family: "M PLUS 1p", sans-serif;
   margin: 0 0 1em 0;
   line-height: 1.3;
   font-weight: 500;
-  color: $font-color-07;
+  color: $key-color-gray10;
 }
 
 h1 {
@@ -76,12 +67,12 @@ h5 { font-size: 0.9rem; }
 
 h6 { font-size: 0.7rem; }
 
-/* リンク */
+// リンク
 a {
 	color: rgba(15, 140, 235, 1);
 }
 
-/* リスト */
+// リスト
 ul {
     list-style: none;
     margin: 0.5rem 0;
@@ -99,4 +90,10 @@ li {
 li:before {
   content: "●";
 	color: rgba(15, 140, 235, 1);
+}
+
+// 区切り線
+hr {
+  margin: 3rem 0;
+  border: solid 1px $key-color-gray03;
 }

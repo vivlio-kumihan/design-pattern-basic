@@ -1,13 +1,21 @@
 @import "../styles/global.scss";
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 2rem;
+  padding: 3rem 0 0;
+  border-bottom: solid 5px $main-color;
+}
+
 .logo {
   font-family: 'Roboto Slab', serif;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 400;
-  color: $font-color-07;
+  color: $key-color-gray07;
   strong {
     font-weight: 800;
-    color: $font-color-10;
+    color: $key-color-gray10;
   }
 }
 
@@ -15,13 +23,7 @@ a:hover{
   text-decoration: none;
 }
 
-.fab {
+.anchor {
   margin-left: 1rem;
-  color: $font-color-10;
-}
-
-.hello {
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: $main-color;
+  color: $key-color-gray07;
 }

@@ -7,6 +7,7 @@ export default function Home() {
       <h1>
         main contetns
       </h1>
+      <h1 className="mainTitle">hello</h1>
       <ul>
         <li>
           <Link href="/elements">

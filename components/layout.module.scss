@@ -1,16 +1,15 @@
 @import "../styles/global.scss";
 
-$background-color: white;
-$font-color: rgba(80, 80, 80, 1);
+
 
 .container {
-  
+  padding: 0 4em 0.1em 4em;
 }
 
-.headerContents {
-  color: $font-color-07;
-}
+// .headerContents {
+//   color: $key-color-gray-07;
+// }
 
-.mainContents {
-  color: $font-color-07;
-}
+// .mainContents {
+//   color: $key-color-gray-07;
+// }
