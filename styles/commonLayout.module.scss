@@ -1,3 +1,46 @@
+@import "../styles/global.scss";
+
+// レスポンシブル対応
+// パソコン：1001px以上 => min-width: 1001px
+// ダブレット：671px以上 => max-width: 1000px / min-width: 671px
+// スマートフォン：670px以下 => max-width: 670px
+
+@media screen and (min-width: 1001px) {
+  .row {
+    display: flex;
+  }
+  
+  .col06 {
+    width: 49%;
+    padding-right: 1rem;
+  }
+  
+  .col04 {
+    width: 33%;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 671px) and (max-width: 1000px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .col06, .col04 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .col06, .col04 {
+    width: 100%;
+  }
+}
 
 .image {
   margin: 0 0 1rem 0;

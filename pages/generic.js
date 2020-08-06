@@ -6,7 +6,7 @@ export default function Generic() {
   return (
     <Layout>
       <header>
-        <h1 className={commonStyle.mainTitle}>Generic</h1>
+        <h1>Generic</h1>
       </header>
 
       <img className={commonLayout.image} src="/pic11.jpg" alt="" />
