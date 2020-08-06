@@ -12,10 +12,10 @@
   font-family: 'Roboto Slab', serif;
   font-size: 1.125rem;
   font-weight: 400;
-  color: $key-color-gray07;
+  color: rgba($key-color-gray, .7);
   strong {
     font-weight: 800;
-    color: $key-color-gray10;
+    color: $key-color-gray;
   }
 }
 
@@ -25,5 +25,5 @@ a:hover{
 
 .anchor {
   margin-left: 1rem;
-  color: $key-color-gray07;
+  color: rgba($key-color-gray, .7);
 }

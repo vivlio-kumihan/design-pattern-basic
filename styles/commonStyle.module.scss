@@ -1,2 +1,49 @@
 @import "../styles/global.scss";
 
+// リスト
+ul {
+  margin: 0.5rem 0;
+  li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem; 
+    text-indent: -1rem;
+  } 
+  li:before {
+    content: "●";
+    color: rgba($main-color, .7);
+  }
+}
+
+ul.altUl {
+  list-style: none;
+  li {
+    // 上の設定を打ち消す。
+    padding-left: 0; 
+    text-indent: 0;
+    // ここから独自の設定
+    margin: 0.85rem 0;
+    padding-top: 0.85rem;
+    border-top: solid 2px rgba($key-color-gray, .3);
+  }
+  li:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+  li:before {
+    // 上の設定を打ち消す。
+    content: "";
+  }
+}
+
+ol {
+  li {
+    margin: 0 0 0.5rem 1rem;
+  } 
+}
+
+li {
+  line-height: 1.5;
+  font-size: 0.85rem;
+  font-weight: 400;  
+} 
+

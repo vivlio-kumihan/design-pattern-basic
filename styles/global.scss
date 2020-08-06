@@ -15,18 +15,16 @@
 // @import "./fontawesome/solid";
 
 $main-color: rgba(245, 106, 106, 1);
-$key-color-gray10: rgba(80, 80, 80, 1);
-$key-color-gray07: rgba(80, 80, 80, 0.7);
-$key-color-gray03: rgba(80, 80, 80, 0.3);
+$key-color-gray: rgba(80, 80, 80, 1);
 
 // Font
 // 本文
 body, input, select, textarea {
   font-family: "M PLUS 1p", sans-serif;
   font-size: 5mm;
-  font-weight: 300;
-  line-height: 1.5; 
-  color: $key-color-gray07;
+  font-weight: 400;
+  line-height: 1.7; 
+  color: rgba($key-color-gray, .8);
 }
 
 // 見出し
@@ -35,65 +33,68 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1rem 0;
   line-height: 1.3;
   font-weight: 500;
-  color: $key-color-gray10;
+  color: $key-color-gray;
 }
 
 h1 {
   margin: 0 0 0.25em 0;
   font-size: 3.25rem;
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.025rem;
 }
 
 h2 { 
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   letter-spacing: -0.025rem;
 }
 
 h3 {
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 6  00;
   letter-spacing: -0.025rem;
 }
 
 h4 {
   font-size: 1.1rem;
-  font-weight: 400;
 }
 
 h5 { font-size: 0.9rem; }
 
 h6 { font-size: 0.7rem; }
 
+strong, b {
+  font-weight: 500;
+  color: $key-color-gray;
+}
+
+em, i {
+font-style: italic;
+}
+
+sup {
+	font-size: 70%; //お好きなサイズに
+	vertical-align: top;
+	position: relative;
+	top: -0.025em; //お好きな位置に
+}
+
+sub {
+	font-size: 70%; //お好きなサイズに
+	vertical-align: bottom;
+	position: relative;
+	bottom: -0.025em; //お好きな位置に
+}
+
+
 // リンク
 a {
-	color: rgba(15, 140, 235, 1);
-}
-
-// リスト
-ul {
-    list-style: none;
-    margin: 0.5rem 0;
-}
-
-li { 
-  margin-bottom: 0.5rem;
-  padding-left: 1em; 
-  text-indent: -1em;
-  line-height: 1.3;
-  font-size: 0.85rem;
-  font-weight: 400;  
-}
-
-li:before {
-  content: "●";
 	color: rgba(15, 140, 235, 1);
 }
 
 // 区切り線
 hr {
   margin: 3rem 0;
-  border: solid 1px $key-color-gray03;
+  border: solid 1px rgba($key-color-gray, .3);
 }
