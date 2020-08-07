@@ -1,6 +1,16 @@
 @import "../styles/global.scss";
 
 // リスト
+
+// li common style
+li {
+  line-height: 1.5;
+  font-size: 0.85rem;
+  font-weight: 400;  
+} 
+
+// Ul common style
+
 ul {
   margin: 0.5rem 0;
   li {
@@ -14,6 +24,7 @@ ul {
   }
 }
 
+// Ul individual style
 ul.altUl {
   list-style: none;
   li {
@@ -35,15 +46,71 @@ ul.altUl {
   }
 }
 
+.column{
+  flex-direction: column;
+}
+
+ul.actions {
+  display: flex;
+  list-style: none;
+  margin-left: -1rem;
+  li {
+    margin-bottom: 1.25rem;
+  }
+  li:before {
+    // デフォルトの設定を打ち消す。
+    content: "";
+  }
+  a {
+    margin-left: 1rem;
+    padding: 0.25rem 2.25rem;
+    border-radius: 0.375em;
+    background-color: $main-color;
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid $main-color;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    cursor: pointer;
+  }
+  .btnSmall {
+    font-size: 0.7em;
+  }
+  .buttonPrimary {
+    background-color: rgba(255, 255, 255, 1);
+    color: $main-color;
+    .btnSmall {
+      font-size: 0.3em;
+    }
+  }
+  .fit {
+    width: 100%;
+    color:blue;
+  }
+}
+
+
+
+// ol common style
 ol {
   li {
     margin: 0 0 0.5rem 1rem;
   } 
 }
 
-li {
-  line-height: 1.5;
-  font-size: 0.85rem;
-  font-weight: 400;  
-} 
+// dl common style --difine list
 
+dl {
+  margin: 0 0 2em 0;
+  dt {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 1rem 0 0 0;
+  }
+  dd p {
+    margin: 0 0 2rem 2rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: rgba($key-color-gray, .8);
+  }
+}

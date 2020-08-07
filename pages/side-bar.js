@@ -1,4 +1,6 @@
 import Layout from '../components/layout'
+import Link from "next/link"
+import classNames from 'classnames'
 
 export default function SideBar() {
   return (

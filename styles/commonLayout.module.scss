@@ -9,6 +9,11 @@
   .row {
     display: flex;
   }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
   
   .col06 {
     width: 49%;

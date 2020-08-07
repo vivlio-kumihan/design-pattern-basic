@@ -122,6 +122,60 @@ export default function Elements() {
               <p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor.</p>
             </dd>
           </dl>
+
+          <h4>Actions</h4>
+          <ul className={commonStyle.actions}>
+            <li><a href="#">Default red</a></li>
+            <li>
+              <a href="#" className={commonStyle.buttonPrimary}>Default white</a>
+            </li>
+          </ul>
+          <ul className={commonStyle.actions}>
+            <li>
+              <a href="#" className={commonStyle.btnSmall}>Small red</a>
+            </li>
+            <li>
+              <a href="#" className={commonStyle.buttonPrimary + ' ' + commonStyle.btnSmall}>Small white</a>
+            </li>
+          </ul>
+
+          <ul className={commonStyle.actions + ' ' + commonStyle.column}>
+            <li><a href="#">Default column</a></li>
+            <li>
+              <a href="#" className={commonStyle.buttonPrimary}>Default column</a>
+            </li>
+          </ul>
+            <ul className={commonStyle.actions + ' ' + commonStyle.column}>
+              <li><a href="#" className={commonStyle.btnSmall}>Small</a></li>
+              <li>
+                <a href="#" className={commonStyle.buttonPrimary + ' ' + commonStyle.btnSmall}>Small</a>
+              </li>
+          </ul>
+          <ul className={commonStyle.actions + ' ' + commonStyle.column}>
+            <li><a href="#" className={commonStyle.fit}>Fit</a></li>
+              <li><a href="#" className={commonStyle.buttonPrimary + ' ' + commonStyle.fit}>Fit</a></li>
+          </ul>
+          <ul className={commonStyle.actions + ' ' + commonStyle.column}>
+              <li><a href="#" className={commonStyle.btnSmall + ' ' + commonStyle.fit}>SmallFit</a></li>
+              <li><a href="#" className={commonStyle.buttonPrimary + ' ' + commonStyle.btnSmall + ' ' + commonStyle.fit}>SmallFit</a></li>
+          </ul>
+
+          <h4>Pagination</h4>
+          <ul className={`pagination`}>
+            <li><span className={`button disabled`}>Prev</span></li>
+            <li><a href="#" className={`page active`}>1</a></li>
+            <li><a href="#" className={`page`}>2</a></li>
+            <li><a href="#" className={`page`}>3</a></li>
+            <li><span>&hellip;</span></li>
+            <li><a href="#" className={`page`}>8</a></li>
+            <li><a href="#" className={`page`}>9</a></li>
+            <li><a href="#" className={`page`}>10</a></li>
+            <li><a href="#" className={`button`}>Next</a></li>
+          </ul>
+
+          {/* Blockquote */}
+          <h3>Blockquote</h3>
+          <blockquote>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.</blockquote>
         </div>
       </div>
     </section>
